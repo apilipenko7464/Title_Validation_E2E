@@ -11,7 +11,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class Selenium {
 
-       public String[][] a2d() throws IOException {
+       public String[][] my_2D_arr() throws IOException {
 
  
               String csvFile = "./src/main/resources/Title_Validation.csv";
@@ -35,7 +35,7 @@ public class Selenium {
               }
 
               br.close();
-              String s2d[][] = new String[lines][columns];
+              String my_2dim_str[][] = new String[lines][columns];
 
               br = new BufferedReader(new FileReader(csvFile));
               WebDriver driver = new FirefoxDriver();
@@ -51,22 +51,22 @@ public class Selenium {
                      driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
                      String title_actual = driver.getTitle();
 
-                     s2d[i][0] = text_case_id;
-                     s2d[i][1] = title_expected;
-                     s2d[i][2] = title_actual;
+                     my_2dim_str[i][0] = text_case_id;
+                     my_2dim_str[i][1] = title_expected;
+                     my_2dim_str[i][2] = title_actual;
                      i++;
               }
 
               driver.quit();
               br.close();
-              return s2d;
+              return my_2dim_str;
 
        }
-      // /**
+       
  public static void main(String[] args) throws IOException {
  core.Selenium selenuim = new core.Selenium();
-selenuim.a2d();
- }    //**/
+selenuim.my_2D_arr();
+ }    
      
 }
 

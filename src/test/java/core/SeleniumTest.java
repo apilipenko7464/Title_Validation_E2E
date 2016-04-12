@@ -26,7 +26,7 @@ public class SeleniumTest {
        @Parameters(name = "Iteration # {index} : exp: {1}; act: {2}")
        public static Collection<String[]> data() throws IOException {
               core.Selenium selenuim = new core.Selenium();
-              return Arrays.asList(selenuim.a2d());
+              return  Arrays.asList(selenuim.my_2D_arr());
 
        }
 
